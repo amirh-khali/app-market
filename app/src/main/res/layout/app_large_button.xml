@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="2dp"
+    android:layout_height="100dp">
+
+    <Button
+        android:id="@+id/installButtonSajjad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Install"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="96sp"
+        android:layout_height="96sp"
+        tools:src="@drawable/ic_launcher_background"
+        />
+    <TextView
+        android:layout_marginLeft="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="App Name"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/pic"/>
+    <TextView
+        android:layout_below="@+id/installButtonSajjad"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Scores"/>
+
+
+</RelativeLayout>
