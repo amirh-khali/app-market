@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.appmarket.AppInformation;
 import com.example.appmarket.R;
 
 /**
@@ -17,7 +18,7 @@ import com.example.appmarket.R;
 public class AppPageFragment extends Fragment {
 
 
-    public AppPageFragment() {
+    public AppPageFragment(AppInformation appInformation) {
         // Required empty public constructor
     }
 

@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,7 +18,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appmarket.AppInformation;
+import com.example.appmarket.MainActivity;
 import com.example.appmarket.R;
+import com.example.appmarket.ResourceManager;
+import com.example.appmarket.ui.appcontainer.AppPageFragment;
+import com.example.appmarket.ui.home.HomeFragment;
 
 import java.util.ArrayList;
 
@@ -28,8 +33,11 @@ public class AppListFragment extends Fragment {
 
     ArrayList<AppInformation> mAppList;
 
-    public AppListFragment(ArrayList<AppInformation> appList) {
+    Integer mContainer;
+
+    public AppListFragment(ArrayList<AppInformation> appList, Integer container) {
         mAppList = appList;
+        mContainer = container;
     }
 
 
@@ -57,6 +65,7 @@ public class AppListFragment extends Fragment {
 
         ArrayList<AppInformation> mAppList;
 
+
         public MyAdapter(ArrayList<AppInformation> appList) {
             mAppList = appList;
         }
@@ -72,10 +81,13 @@ public class AppListFragment extends Fragment {
         @Override
         public void onBindViewHolder(MyViewHolder holder, final int position) {
             holder.logo.setImageResource(mAppList.get(position).mLogoID);
+
             holder.logo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Toast.makeText(ActivityMain.this, "This is: " + companyList[position], Toast.LENGTH_SHORT).show();
+                    FragmentManager manager = getFragmentManager();
+                    AppPageFragment appPageFragment = new AppPageFragment(mAppList.get(position));
+                    manager.beginTransaction().replace(mContainer, appPageFragment).addToBackStack(null).commit();
                 }
             });
             holder.name.setText(mAppList.get(position).mName);
