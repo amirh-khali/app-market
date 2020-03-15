@@ -42,6 +42,10 @@ public class AppListFragment extends Fragment {
         RecyclerView rv = view.findViewById(R.id.app_list_recycler_view);
 
         MyAdapter adapter = new MyAdapter(mAppList);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
+
+
         rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
         rv.setAdapter(adapter);
 
