@@ -6,8 +6,10 @@ package com.example.appmarket.values;
  */
 public class StaticValues {
     //this is an example of data we need, all static, all final;
-    public static final String APPNAME         = "App Store";
-    public static final String HOME_STRING     = "Home Page";
+    public static final String  APPNAME         = "App Store";
+    public static final String  HOME_STRING     = "Home Page";
+    public static final int     APP_CAT         = 0;
+    public static final int     GAME_CAT        = 1;
 
 
     // Armin's Values
