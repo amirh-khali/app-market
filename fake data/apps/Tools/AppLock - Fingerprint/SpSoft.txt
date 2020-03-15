@@ -1,0 +1,101 @@
+https://play.google.com/store/apps/details?id=com.sp.protector.free
+
+
+✔ Smart AppLock is an AppLocker or App Protector that will lock and protect apps using a password or pattern and fingerprint.
+
+Lock Facebook, Whatsapp, Gallery apps with password and prevent the apps from being exposed by snooper!
+
+✔ In addition to perfect lock, AppLock can catch intruders by taking a picture and even hide the fact that lock the app with fake error window!
+
+The most advanced AppLock! try it now!
+
+--- Main Features ---
+▶ AppLock
+Lock the app with a password to protect your privacy. e.g) Messenger, WeChat and any apps
+
+▶ Catch Intruders
+If someone access your app then, take a picture and send to your email.
+
+▶ Fingerprint
+Supports convenient and powerful lock with fingerprint sensor.(Samsung device or Android Marshmallow)
+
+▶ Fake Lock
+You can even hide the fact that lock the app with fake error window.
+
+▶ Notification Lock
+Blocks the locked app's notification message in the top notification bar
+
+▶ Scalable Pattern
+Scalable pattern size up to 18x18 than the existing simple 3x3 pattern.
+
+▶ Smart Lock
+Lock only specific time or auto-unlock when connected to specific WiFi or Blutooth.
+
+▶ Multiple Password
+You can set a different password for each locked app.
+
+▶ Home Screen Lock
+Lock the whole phone using lock screen of AppLock instead of lock screen of system.
+
+▶ Screen Lock
+Prevents the screen turns off when running certain apps.(make use of Internet, E-Book)
+
+--- App Features ---
+▶ The first generation AppLock and verified by tens of millions of people to download the app until now.
+
+▶ The app size is just about 3MB and working fast and lightly.
+
+▶ AppLock provide a variety of features and detailed options than simple feature in other app.
+
+▶ Supports 31 languages.
+
+--- Other features ---
+· Support PIN, Pattern, Password, Guesture, Fingerprint.
+
+· Easy to lock/unlock using widget and notification bar.
+
+· The user can decorate the lock screen. e.g) change a background the desired photo.
+
+· AppLock supports the ability to reset a lost password.
+
+· You can place the buttons arranged of password randomly.
+
+· Restrict unlock attempts to prevent others continually to attempt to unlock it.
+
+· Supports the ability to lock Incoming Call.
+
+· Supports the ability to lock WiFi, Bluetooth.
+
+· You can auto-lock newly installed apps.
+
+· When running certain apps that can automatically rotate the screen (or vertical fixed).
+
+· Guard private data, privacy and keep security and app protection/safer.
+
+· In addition, it includes more features.
+
+--- FAQ ---
+1) How can I prevent AppLock to be uninstalled and delete?
+· Please enable 'Uninstallation Prevention' option in settings, then AppLock is never uninstalled.
+
+2) How can I prevent AppLock to be killed by Task Manager?
+· Please install Helper, then, Task Manager can't kill AppLock.
+
+3) Is there a feature for forgotten password
+Yes, if you set your email or security QnA, you can initialize your password when you forgot password.
+
+4) How can I hide pictures and video?
+If you lock Gallery app then, other user can't see your photo and video.
+
+5) Can't run(find) Smart AppLock(or AppLock disappears in App Drawer)
+· if you hide Smart AppLock's Icon in options, and then AppLock will disappear. To run it, please put 'Widget' of AppLock in Widget List and click it.
+
+6) Can't uninstall Smart AppLock.
+· Please disable 'Uninstallation Prevention' option in Settings before uninstalling Smart AppLock.
+
+
+AppLock uses the Device Administrator permission.(only used to prevent AppLock being uninstalled)
+
+AppLock uses Accessibility services.
+
+* App Name is changed from Smart App Protector.
