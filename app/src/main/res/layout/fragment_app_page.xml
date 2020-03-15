@@ -1,159 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:paddingStart="8dp"
-android:paddingTop="8dp"
-android:paddingEnd="8dp"
-tools:context=".MainActivity">
-
-<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:paddingStart="8dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp">
+            android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/image_container"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                app:cardCornerRadius="8dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
 
-                <ImageView
-                    android:id="@+id/app_picture"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/image_container"
                     android:layout_width="96dp"
                     android:layout_height="96dp"
-                    android:scaleType="fitXY"
-                    tools:src="@drawable/ic_launcher_background" />
-            </androidx.cardview.widget.CardView>
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/app_picture"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:scaleType="fitXY"
+                        tools:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_margin="12dp"
+                    android:layout_toEndOf="@+id/image_container"
+                    android:maxWidth="180dp"
+                    android:maxLines="1"
+                    tools:text="this is just for test, there is not real named" />
+
+                <TextView
+                    android:id="@+id/app_developer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/app_name"
+                    android:layout_alignStart="@id/app_name"
+                    android:maxWidth="100dp"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    tools:text="Telegram.Co" />
+
+
+            </RelativeLayout>
+
+            <!-- -->
+
+            <LinearLayout
+                android:id="@+id/button_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/download_button"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/link_button"
+                    android:text="@string/text_install" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary" />
+
+            <!-- Critical Information -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.25" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.75" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="@id/gl1" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="@id/gl2" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="@id/gl3" />
+
+                <TextView
+                    android:id="@+id/app_apk_size"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/gl1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="BLAAA" />
+
+                <TextView
+                    android:id="@+id/app_category"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/gl2"
+                    app:layout_constraintStart_toStartOf="@id/gl1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="BLAAA" />
+
+                <TextView
+                    android:id="@+id/app_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/gl3"
+                    app:layout_constraintStart_toStartOf="@id/gl2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="BLAAA" />
+
+                <TextView
+                    android:id="@+id/app_count_of_download"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/gl3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="BLAAA" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary" />
+            <!-- Pictures -->
+
+            <view
+                android:id="@+id/recycler_view_image"
+                class="androidx.appcompat.app.AlertController$RecycleListView"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+
+            </view>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary" />
+            <!-- Description -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:textColor="@color/colorText"
+                android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/app_name"
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:layout_margin="12dp"
-                android:layout_toEndOf="@+id/image_container"
-                android:maxWidth="180dp"
-                android:maxLines="1"
-                tools:text="this is just for test, there is not real named" />
-
-            <TextView
-                android:id="@+id/app_provider"
-                android:layout_width="wrap_content"
-                android:maxWidth="100dp"
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="@color/colorText"
                 android:textSize="12sp"
-                android:maxLines="1"
-                tools:text="Telegram.Co"
-                android:layout_height="24dp"
-                android:layout_below="@id/app_name"
-                android:layout_alignStart="@id/app_name"/>
+                tools:text="bla bla bla\nbla bla bla\n\n\n bla bl blaaaaaa!!!" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary" />
+            <!-- Miscellaneous -->
 
-        </RelativeLayout>
-
-        <!-- -->
-
-        <LinearLayout
-            android:id="@+id/button_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/download_button"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="36dp"
-                android:layout_margin="6dp"
-                android:text="@string/text_install"
-                android:background="@drawable/link_button"
-                />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="4dp"
-            android:background="@color/colorPrimary"/>
-
-        <!-- Critical Information -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="48dp">
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/gl1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.25"/>
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/gl2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.5"/>
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/gl3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.75"/>
-            <LinearLayout
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="@id/gl1"
-                android:background="@color/colorPrimaryDark"/>
-
-            <LinearLayout
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="@id/gl2"
-                android:background="@color/colorPrimaryDark"/>
-
-            <LinearLayout
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="@id/gl3"
-                android:background="@color/colorPrimaryDark"/>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="4dp"
-            android:background="@color/colorPrimary"/>
-        <!-- Pictures -->
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="4dp"
-            android:background="@color/colorPrimary"/>
-        <!-- Description -->
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="4dp"
-            android:background="@color/colorPrimary"/>
-        <!-- Miscellaneous -->
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
 
 
 </FrameLayout>

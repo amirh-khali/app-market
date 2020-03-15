@@ -39,13 +39,13 @@ public class CategoryListFragment extends Fragment {
         switch (type) {
             case APP_CAT:
                 for (String s:AppCategories.APP_LIST) {
-                    items.add(new CategoryItem(s, 0)); //TODO give them proper id
+                    items.add(new CategoryItem(s, R.drawable.ic_dashboard_black_24dp)); //TODO give them proper id
                 }
                 break;
             case GAME_CAT:
             default:
                 for (String s: GameCategories.GAME_LIST) {
-                    items.add(new CategoryItem(s, 0));
+                    items.add(new CategoryItem(s, R.drawable.ic_dashboard_black_24dp ));
                 }break;
         }
     }

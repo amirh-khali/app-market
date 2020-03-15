@@ -46,7 +46,7 @@ public class AppListFragment extends Fragment {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
 
 
-        rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        rv.setLayoutManager(gridLayoutManager);
         rv.setAdapter(adapter);
 
 
