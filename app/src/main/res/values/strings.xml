@@ -3,7 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_category">Category</string>
     <string name="title_search">Search</string>
-    <string name="text_install">Install</string>
+    <string name="text_install">Download</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Bellow is Armin's Strings-->
 
