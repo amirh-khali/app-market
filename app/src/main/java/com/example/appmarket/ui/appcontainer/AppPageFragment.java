@@ -26,11 +26,7 @@ import java.util.ArrayList;
  */
 public class AppPageFragment extends Fragment {
     private AppInformation mAppInformation;
-
-    public AppPageFragment() {
-        // Required empty public constructor
-    }
-
+    
     public AppPageFragment(AppInformation appInformation) {
         mAppInformation = appInformation;
     }

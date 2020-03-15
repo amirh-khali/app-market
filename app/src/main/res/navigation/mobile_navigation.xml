@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_category"
-        android:name="com.example.appmarket.ui.category.CategoryFragment"
+        android:name="com.example.appmarket.ui.category.CategoryContainerFragment"
         android:label="@string/title_category"
         tools:layout="@layout/fragment_category" />
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.appmarket.MainActivity;
 import com.example.appmarket.R;
+import com.example.appmarket.ResourceManager;
+import com.example.appmarket.ui.appcontainer.AppPageFragment;
+import com.example.appmarket.ui.list.AppListFragment;
 import com.example.appmarket.values.categories.AppCategories;
 import com.example.appmarket.values.categories.GameCategories;
 
@@ -28,18 +33,18 @@ import static com.example.appmarket.values.StaticValues.*;
  * A simple {@link Fragment} subclass.
  */
 public class CategoryListFragment extends Fragment {
+
     ArrayList<CategoryItem> items;
 
-    public CategoryListFragment() {
-        // Required empty public constructor
-    }
 
     public CategoryListFragment(int type) {
         items = new ArrayList<>();
         switch (type) {
             case APP_CAT:
+
                 for (String s:AppCategories.APP_LIST) {
                     items.add(new CategoryItem(s, R.drawable.ic_dashboard_black_24dp)); //TODO give them proper id
+
                 }
                 break;
             case GAME_CAT:
@@ -87,6 +92,17 @@ public class CategoryListFragment extends Fragment {
             TextView textView = convertView.findViewById(R.id.category_name);
             textView.setText(mObject.get(position).name);
             //TODO setIcon
+
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager manager = getFragmentManager();
+                    AppListFragment appListFragment = new AppListFragment(ResourceManager.getApps(), R.id.fragment_container);
+                    manager.beginTransaction().replace(R.id.fragment_container, appListFragment).addToBackStack(null).commit();
+
+                }
+            });
+
             return convertView;
         }
     }
