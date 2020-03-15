@@ -31,7 +31,7 @@ public class AppInformation {
         mDeveloper = developer;
         mRate = 4.5;
         mLogoID = logoID;
-        mImagesID.addAll(imagesID);
+        mImagesID = imagesID;
         mSize = 25;
         mInstalls = 100000;
     }
