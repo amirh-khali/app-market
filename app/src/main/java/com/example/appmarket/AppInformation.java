@@ -1,15 +1,39 @@
 package com.example.appmarket;
 
+import java.util.ArrayList;
+
 public class AppInformation {
-    double cost ;
-    String src ;
-    String appName;
 
+    public String mName;
+    public String mCategory;
+    public String mDescription;
+    public String mDownloadAddress;
+    public String mDeveloper;
 
-    public AppInformation(String appName, String src , double cost) {
-        this.appName = appName;
-        this.cost = cost;
-        this.src = src;
+    public Double mRate;
 
+    public Integer mLogoID;
+    public ArrayList<Integer> mImagesID;
+    public Integer mSize;
+    public Integer mInstalls;
+
+    public AppInformation (String name,
+                           String category,
+                           String downloadAddress,
+                           String developer,
+                           Integer logoID,
+                           ArrayList<Integer> imagesID,
+                           String description) {
+        mName = name;
+        mCategory = category;
+        mDescription = description;
+        mDownloadAddress = downloadAddress;
+        mDeveloper = developer;
+        mRate = 4.5;
+        mLogoID = logoID;
+        mImagesID.addAll(imagesID);
+        mSize = 25;
+        mInstalls = 100000;
     }
+
 }
