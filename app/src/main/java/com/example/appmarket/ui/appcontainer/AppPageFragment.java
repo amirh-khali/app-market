@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 public class AppPageFragment extends Fragment {
     private AppInformation mAppInformation;
-    
+
     public AppPageFragment(AppInformation appInformation) {
         mAppInformation = appInformation;
     }
@@ -64,7 +64,7 @@ public class AppPageFragment extends Fragment {
 
             MyAdapter adapter = new MyAdapter(mAppInformation.mImagesID);
 
-            LinearLayoutManager manager = new LinearLayoutManager(getContext());
+            LinearLayoutManager manager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 
             rv.setLayoutManager(manager);
             rv.setAdapter(adapter);
@@ -106,10 +106,10 @@ public class AppPageFragment extends Fragment {
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            logo = itemView.findViewById(R.id.app_logo);
+            logo = (ImageView) itemView;
             logo.setScaleType(ImageView.ScaleType.FIT_XY);
-            logo.getLayoutParams().height = RecyclerView.LayoutParams.MATCH_PARENT;
-            logo.getLayoutParams().width = 300; //TODO THIS IS A TOTAL MESS YOU NEED TO CONFIGURE DP AND FIX IT ITS JUST FOR WORKING RIGHT NOW
+//            logo.getLayoutParams().height = RecyclerView.LayoutParams.MATCH_PARENT;
+//            logo.getLayoutParams().width = 300; //TODO THIS IS A TOTAL MESS YOU NEED TO CONFIGURE DP AND FIX IT ITS JUST FOR WORKING RIGHT NOW
 
         }
     }

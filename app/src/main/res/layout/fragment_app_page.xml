@@ -184,14 +184,14 @@
                 android:background="@color/colorPrimary" />
             <!-- Pictures -->
 
-            <view
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_image"
                 class="androidx.appcompat.app.AlertController$RecycleListView"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:orientation="horizontal">
 
-            </view>
+            </androidx.recyclerview.widget.RecyclerView>
 
             <LinearLayout
                 android:layout_width="match_parent"
