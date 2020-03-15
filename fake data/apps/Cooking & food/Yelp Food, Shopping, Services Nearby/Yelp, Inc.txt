@@ -1,0 +1,52 @@
+https://play.google.com/store/apps/details?id=com.yelp.android
+
+
+Yelp has over 199 million business and restaurant reviews worldwide. Whether you’re looking for a new pizzeria, a great coffee shop nearby, a new salon, or the best handyman in town, Yelp is the city and travel guide to finding the perfect places to eat, shop, drink, relax, visit and play.
+
+Read online reviews, browse photos and menus, order takeout from favorite spots, make reservations, see hours, locations, and other important information for any business you’re looking for.
+
+Yelp puts great local businesses right at your fingertips. Discover new foods, hot spots, places for shopping and local businesses near me! While traveling or at home. Plus, order delivery or pickup.
+
+Yelp features:
+🍕 Local Eats: Find Restaurants and Food Delivery Near Me 🍕
+• Find where to eat. Yelp shows all the newest, hottest and top rated places to eat and bars to drink nearby
+• Dine at local restaurants for breakfast, lunch and dinner, or get something to go
+• Order timely food delivery
+• Make quick reservations, book a table, order pickup or food delivery, view restaurant menus—all from your phone
+• Read restaurant reviews from other Yelp users and scroll through photos to help you decide where to go
+• Get amazing food deals for dining and delivery places nearby, plan dinner reservations for trips in advance
+
+✍️ Review, Discover, and Add Photos 📸
+• Discover local events, businesses and services like body shops and hair salons
+• Look up addresses and phone numbers for businesses near me
+• Read and write reviews, check-in to local businesses, upload photos and add tips for other Yelp users
+• Browse photo galleries and add photos to share experiences
+• Redeem great check-in offers in the area or sign up for cash back
+
+🚗 Find Shops Around Me, Get Quotes, and Hire Professionals 🛠
+• Find the coolest stores and top rated body shops complete with customer reviews and contact info
+• Hire local professionals for home renovation, car repair, car transport, landscaping, moving, and other hiring services
+• Get quotes from professionals, message contractors nearby, and book appointments with a click
+• Read millions of user reviews and recommendations by the Yelp community
+• Filter searches by neighborhood, distance, rating, price, location, and hours of operation
+
+💅 Beauty - Pamper Yourself 💇
+• Find highly-rated salons, spas, massage therapists, acupuncturists, and offers around me
+• Book appointments through Yelp at the most relaxing staycation destinations or find deals when traveling
+
+🔍 Search Filters 🔍
+• Filter search results by neighborhood, distance, rating, price, open now, and other specifics like good for groups, full bar, cuisine type etc.
+• Look up addresses and phone numbers, call a business, order food delivery and make quick reservations directly from the Yelp app
+• Find the top rated food, hotels or hiring services nearby or in cities like New York, Chicago, San Francisco, Los Angeles, Houston, Phoenix, Philadelphia
+
+🍩 Features 🎨
+• Read millions of expert user reviews and browse through beautiful photos of each business
+• Write and read online reviews, check-in to local businesses, order pickup or delivery, upload photos, book appointments, find a new activity, and add tips for other Yelp users
+• Use Yelp as a travel guide and as a food guide for eating, drink, things to do, to see, to shop and relax
+
+Need Help? Contact Yelp at https://www.yelp-support.com/?l=en_US
+Note: Continued use of GPS running can dramatically decrease battery life.
+
+This software uses code of FFmpeg (http://ffmpeg.org) licensed under the LGPLv2.1 (http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) and its source can be downloaded here: https://github.com/Yelp/ffmpeg-android
+
+Find top local restaurants, bars, hotels, events and other things to do around me, read customer reviews, order pickup or delivery, and search for services near me, all from the Yelp app.

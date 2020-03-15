@@ -1,0 +1,34 @@
+https://play.google.com/store/apps/details?id=com.androidapps.unitconverter
+
+
+
+Unit Converter is a simple, smart and elegant tool with more than 44 categories of units that are used in daily life. This is the only Unit Converter App in Google play store that has such a wide range of Unit conversion features with very simple and easy to use interface.
+Despite of having more than 100 features and wide range of categories, unit converter takes up just less than 4 MB storage in your device. Vast usage, easy handling, Simple design, Premium Contents, Regular feature updates are the reasons for our App is loved and supported by more than 5 million users.
+
+BEST FEATURES OF UNIT CONVERTER APP
+✓ Built-In real time Currency Converter with 150 world currencies and their latest exchange rates.
+✓ 44 unit categories, 12700+unit conversions
+✓Smart Tools - Bubble Level, Compass, Protractor, Resistor codes, Stop Watch, Ruler, World Time, Date Converter and much more.
+✓New Tools - Battery Monitor, Notes, Expression Evaluation, Equation Solver, Induction Color codes, Scientific Calculator
+✓ Financial calculators - Loan calculator, Compound interest calculator, Retirement calculator, Service tax calculator, Stock calculator
+✓ Math calculators -Roman numeral converter, Number base converter, Number series generator, Ratio, Fraction, Proportion, etc.
+✓ Has most important conversion tools that are used in daily life including Fuel Calculations, Temperature, Volume, Speed, Weight, Computer Storage, Angle, Power, Viscosity, Force, Energy, Torque, Density and much more…
+✓ Has Engineering conversion tools like radiation, electric resistance, electric capacitance, inductance, inertia, specific heat density, specific heat capacity, and illumination.
+✓Premium contents - onetime payment to remove ads and get access to the premium contents
+✓Offline Currency Converter feature lets you to convert all the world currencies without connecting to the internet.
+✓Download exchange rates - now premium users can download the latest currency exchange rates to their device
+✓ Has the highest number of unit conversion categories among all other unit converters.
+✓ Now you can add a Unit converter Widget to your home screen and convert all the units without opening the application
+✓ Time Zone Calculator with day light savings and accurate time differences calculations.
+✓ Built-In Calculator to perform basic arithmetic operations on the fly while using the unit converter.
+✓ Built-In Search functionality, Application shortcuts
+✓ Supports both Metric and Imperial Units
+✓ A Feature to add your own Custom Unit and favorite Conversions.
+✓ First ever Unit Conversion App to feature and support Latest Material design.
+
+Device permissions and usage
+★ android.permission.INTERNET : to fetch latest currency exchange rates from the internet
+★ com.android.vending.BILLING : to remove ads and get access to premium contents of unit converter.
+★ android.permission.WRITE_EXTERNAL_STORAGE : to download latest currency exchange rates to the device and access it. (premium feature)
+Our Unit Converter is the highest rated Unit Converter App in Google play store. Our app has over a 5 Million user base. Our unit converter app has the likes of various users ranging from students to a high-level Professional who use conversion tools for their daily activities which serves their purpose.
+P.S. Unit converter was designed with the goal of supporting wide range of devices from small screen phone devices to large screen tablets plus it features worldwide languages and their conversion system. We aim to add and support more range of units to the application in the near future. Thanks for your continuous support.
