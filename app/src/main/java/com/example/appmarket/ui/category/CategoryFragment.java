@@ -15,7 +15,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.appmarket.R;
 import com.google.android.material.tabs.TabLayout;
 
-import static com.example.appmarket.values.StaticValues.*;
+import static com.example.appmarket.utilities.StaticValues.*;
 
 public class CategoryFragment extends Fragment {
 

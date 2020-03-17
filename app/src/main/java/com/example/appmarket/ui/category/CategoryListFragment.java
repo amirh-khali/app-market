@@ -16,18 +16,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.appmarket.MainActivity;
 import com.example.appmarket.R;
 import com.example.appmarket.ResourceManager;
-import com.example.appmarket.ui.appcontainer.AppPageFragment;
 import com.example.appmarket.ui.list.AppListFragment;
-import com.example.appmarket.values.categories.AppCategories;
-import com.example.appmarket.values.categories.GameCategories;
+import com.example.appmarket.utilities.categories.AppCategories;
+import com.example.appmarket.utilities.categories.GameCategories;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.appmarket.values.StaticValues.*;
+import static com.example.appmarket.utilities.StaticValues.*;
 
 /**
  * A simple {@link Fragment} subclass.

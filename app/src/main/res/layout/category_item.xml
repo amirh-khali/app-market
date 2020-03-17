@@ -10,7 +10,7 @@
         android:id="@+id/category_icon"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        tools:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/ic_dashboard_black_24dp" />
 
     <TextView
         android:id="@+id/category_name"
@@ -21,7 +21,7 @@
         android:layout_marginStart="24dp"
         android:layout_toEndOf="@id/category_icon"
         android:gravity="center_vertical"
-        android:textSize="14sp"
+        android:textSize="@dimen/Text_size"
         tools:text="buuuuullllshiiiiit" />
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.appmarket.ui.appcontainer;
+package com.example.appmarket.ui.apppage;
 
 
 import android.os.Bundle;
@@ -12,12 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.appmarket.AppInformation;
 import com.example.appmarket.R;
-import com.example.appmarket.ui.list.AppListFragment;
+
+import org.w3c.dom.Attr;
 
 import java.util.ArrayList;
 
@@ -107,10 +107,11 @@ public class AppPageFragment extends Fragment {
         public MyViewHolder(View itemView) {
             super(itemView);
             logo = (ImageView) itemView;
-            logo.setScaleType(ImageView.ScaleType.FIT_XY);
-//            logo.getLayoutParams().height = RecyclerView.LayoutParams.MATCH_PARENT;
-//            logo.getLayoutParams().width = 300; //TODO THIS IS A TOTAL MESS YOU NEED TO CONFIGURE DP AND FIX IT ITS JUST FOR WORKING RIGHT NOW
-
+            logo.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            logo.setAdjustViewBounds(true);
+            RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            lp.setMargins(4, 4, 4, 4);
+            logo.setLayoutParams(lp);
         }
     }
 }

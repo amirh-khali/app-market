@@ -1,7 +1,7 @@
 package com.example.appmarket;
 
-import com.example.appmarket.values.categories.AppCategories;
-import com.example.appmarket.values.categories.GameCategories;
+import com.example.appmarket.utilities.categories.AppCategories;
+import com.example.appmarket.utilities.categories.GameCategories;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -41,12 +41,13 @@
                 <TextView
                     android:id="@+id/app_name"
                     android:layout_width="wrap_content"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="12dp"
                     android:layout_toEndOf="@+id/image_container"
                     android:maxWidth="180dp"
                     android:maxLines="1"
-                    tools:text="this is just for test, there is not real named" />
+                    android:textSize="@dimen/Text_title_size"
+                    tools:text="App Name Size" />
 
                 <TextView
                     android:id="@+id/app_developer"
@@ -56,7 +57,7 @@
                     android:layout_alignStart="@id/app_name"
                     android:maxWidth="100dp"
                     android:maxLines="1"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/Text_size"
                     tools:text="Telegram.Co" />
 
 
@@ -188,7 +189,7 @@
                 android:id="@+id/recycler_view_image"
                 class="androidx.appcompat.app.AlertController$RecycleListView"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="200dp"
                 android:orientation="horizontal">
 
             </androidx.recyclerview.widget.RecyclerView>
@@ -205,7 +206,7 @@
                 android:layout_height="wrap_content"
                 android:text="Description:"
                 android:textColor="@color/colorText"
-                android:textSize="16sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/description"
@@ -213,7 +214,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:textColor="@color/colorText"
-                android:textSize="12sp"
+                android:textSize="@dimen/Text_size"
                 tools:text="bla bla bla\nbla bla bla\n\n\n bla bl blaaaaaa!!!" />
 
             <LinearLayout

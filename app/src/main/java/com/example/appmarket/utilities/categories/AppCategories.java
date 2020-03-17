@@ -1,4 +1,4 @@
-package com.example.appmarket.values.categories;
+package com.example.appmarket.utilities.categories;
 
 public class AppCategories {
     public static final String  APP_WEATHER          = "Weather";

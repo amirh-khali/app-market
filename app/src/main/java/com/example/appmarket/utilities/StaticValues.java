@@ -1,4 +1,4 @@
-package com.example.appmarket.values;
+package com.example.appmarket.utilities;
 
 
 /** all static values are stored here

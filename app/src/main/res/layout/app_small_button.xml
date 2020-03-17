@@ -27,12 +27,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/image_container"
-        android:layout_alignRight="@id/image_container"
-        android:layout_alignLeft="@id/image_container"
+        android:layout_alignStart="@id/image_container"
+        android:layout_alignEnd="@id/image_container"
         android:layout_marginTop="4dp"
         android:textColor="@color/colorText"
         android:maxLines="2"
-        android:textSize="16sp"
+        android:textSize="@dimen/Text_size"
         tools:text="App name " />
 
     <TextView
@@ -40,8 +40,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@id/image_container"
-        android:layout_alignLeft="@id/image_container"
+        android:layout_alignStart="@id/image_container"
+        android:layout_alignEnd="@id/image_container"
         android:layout_marginTop="2sp"
         tools:text="Free"
         android:textColor="#707070"/>

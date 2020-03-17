@@ -1,8 +1,6 @@
 package com.example.appmarket.ui.list;
 
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,14 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.appmarket.AppInformation;
-import com.example.appmarket.MainActivity;
 import com.example.appmarket.R;
-import com.example.appmarket.ResourceManager;
-import com.example.appmarket.ui.appcontainer.AppPageFragment;
-import com.example.appmarket.ui.home.HomeFragment;
+import com.example.appmarket.ui.apppage.AppPageFragment;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.appmarket.values.categories;
+package com.example.appmarket.utilities.categories;
 
 public class GameCategories {
     public static final String  GAME_ACTION              = "Action";
