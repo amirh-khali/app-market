@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_container_small"
     android:layout_width="match_parent"
     android:layout_height="160dp"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="4dp">
+    android:padding="8dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/image_container"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        app:cardCornerRadius="8dp"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="8dp">
 
         <ImageView
             android:id="@+id/app_logo"
@@ -30,8 +33,8 @@
         android:layout_alignStart="@id/image_container"
         android:layout_alignEnd="@id/image_container"
         android:layout_marginTop="4dp"
-        android:textColor="@color/colorText"
         android:maxLines="2"
+        android:textColor="@color/colorText"
         android:textSize="@dimen/Text_size"
         tools:text="App name " />
 
@@ -39,12 +42,12 @@
         android:id="@+id/app_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignStart="@id/image_container"
         android:layout_alignEnd="@id/image_container"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="2sp"
-        tools:text="Free"
-        android:textColor="#707070"/>
+        android:textColor="#707070"
+        tools:text="Free" />
 
 
 </RelativeLayout>
