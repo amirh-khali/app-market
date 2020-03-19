@@ -86,7 +86,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary" />
+                android:background="@drawable/line_h" />
 
             <!-- Critical Information -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -117,19 +117,19 @@
                 <LinearLayout
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/line_v"
                     app:layout_constraintEnd_toEndOf="@id/gl1" />
 
                 <LinearLayout
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/line_v"
                     app:layout_constraintEnd_toEndOf="@id/gl2" />
 
                 <LinearLayout
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/line_v"
                     app:layout_constraintEnd_toEndOf="@id/gl3" />
 
                 <TextView
@@ -182,7 +182,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary" />
+                android:background="@drawable/line_h" />
             <!-- Pictures -->
 
             <androidx.recyclerview.widget.RecyclerView
@@ -199,7 +199,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary" />
+                android:background="@drawable/line_h" />
             <!-- Description -->
             <TextView
                 android:layout_width="match_parent"
@@ -222,7 +222,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary" />
+                android:background="@drawable/line_h" />
             <!-- Miscellaneous -->
 
         </LinearLayout>
