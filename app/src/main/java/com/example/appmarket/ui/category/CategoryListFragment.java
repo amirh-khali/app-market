@@ -79,7 +79,7 @@ public class CategoryListFragment extends Fragment {
 
         @NonNull
         @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             if (convertView == null) {
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.category_item, parent, false);
             }
@@ -91,7 +91,7 @@ public class CategoryListFragment extends Fragment {
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ((MainActivity)getContext()).loadFragment(new AppListFragment(ResourceManager.getApps()));
+                    ((MainActivity)getContext()).loadFragment(new AppListFragment(ResourceManager.getApps(items.get(position).name)));
                 }
             });
 

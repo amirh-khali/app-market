@@ -8,11 +8,21 @@ import java.util.Arrays;
 
 public class ResourceManager {
 
-    private static ArrayList<AppInformation> apps = new ArrayList<>();
+    private static ArrayList<AppInformation> apps;
 
     public static ArrayList<AppInformation> getApps () { return apps; }
 
+    public static ArrayList<AppInformation> getApps(String category) {
+        ArrayList<AppInformation> appsByCategory = new ArrayList<>();
+        for (AppInformation app : apps) {
+            if (app.mCategory.equals(category))
+                appsByCategory.add(app);
+        }
+        return appsByCategory;
+    }
+
     public ResourceManager () {
+        apps = new ArrayList<>();
         apps.add(new AppInformation("Call of Duty",
                 GameCategories.GAME_ACTION,
                 "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter",
