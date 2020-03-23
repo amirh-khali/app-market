@@ -22,22 +22,25 @@ public class CategoryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_category, container, false);
+
         TabLayout tb = root.findViewById(R.id.tab_layout);
         ViewPager vp = root.findViewById(R.id.view_pager);
         MyPagerAdapter pa = new MyPagerAdapter(getChildFragmentManager(), 0);
-        tb.setupWithViewPager(vp);
-        vp.setAdapter(pa);
 
+        vp.setAdapter(pa);
+        tb.setupWithViewPager(vp);
         return root;
     }
 
     private class MyPagerAdapter extends FragmentPagerAdapter {
-        CategoryListFragment game = new CategoryListFragment(GAME_CAT);
-        CategoryListFragment app = new CategoryListFragment(APP_CAT);
 
+        private CategoryListFragment game;
+        private CategoryListFragment app;
 
         public MyPagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
+            game = new CategoryListFragment(GAME_CAT);
+            app = new CategoryListFragment(APP_CAT);
         }
 
         @NonNull
@@ -66,5 +69,6 @@ public class CategoryFragment extends Fragment {
         public int getCount() {
             return 2;
         }
+
     }
 }

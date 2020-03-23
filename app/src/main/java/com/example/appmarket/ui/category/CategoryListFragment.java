@@ -7,7 +7,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.appmarket.MainActivity;
 import com.example.appmarket.R;
 import com.example.appmarket.ResourceManager;
 import com.example.appmarket.ui.list.AppListFragment;
@@ -34,22 +34,20 @@ public class CategoryListFragment extends Fragment {
 
     ArrayList<CategoryItem> items;
 
-
     public CategoryListFragment(int type) {
         items = new ArrayList<>();
         switch (type) {
             case APP_CAT:
-
-                for (String s:AppCategories.APP_LIST) {
+                for (String s : AppCategories.APP_LIST) {
                     items.add(new CategoryItem(s, R.drawable.ic_dashboard_black_24dp)); //TODO give them proper id
-
                 }
                 break;
             case GAME_CAT:
             default:
-                for (String s: GameCategories.GAME_LIST) {
+                for (String s : GameCategories.GAME_LIST) {
                     items.add(new CategoryItem(s, R.drawable.ic_dashboard_black_24dp ));
-                }break;
+                }
+                break;
         }
     }
 
@@ -58,50 +56,56 @@ public class CategoryListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_category_list, container, false);
 
-
         MyAdapter myAdapter = new MyAdapter(getContext(), items);
         ListView listView = root.findViewById(R.id.list_view);
         listView.setAdapter(myAdapter);
+
         return root;
     }
 
     private class MyAdapter extends ArrayAdapter {
-        Context mContext;
-        ArrayList<CategoryItem> mObject;
 
+        ArrayList<CategoryItem> items;
 
         public MyAdapter(@NonNull Context context, @NonNull List objects) {
             super(context, 0, objects);
-            mContext = context;
-            mObject = (ArrayList) objects;
+            items = (ArrayList) objects;
         }
 
         @Override
         public int getCount() {
-            return mObject.size();
+            return items.size();
         }
 
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             if (convertView == null) {
-                convertView = LayoutInflater.from(mContext).inflate(R.layout.category_item, parent, false);
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.category_item, parent, false);
             }
             TextView textView = convertView.findViewById(R.id.category_name);
-            textView.setText(mObject.get(position).name);
+            textView.setText(items.get(position).name);
+
             //TODO setIcon
 
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    FragmentManager manager = getFragmentManager();
-                    AppListFragment appListFragment = new AppListFragment(ResourceManager.getApps(), R.id.fragment_container);
-                    manager.beginTransaction().replace(R.id.fragment_container, appListFragment).addToBackStack(null).commit();
-
+                    ((MainActivity)getContext()).loadFragment(new AppListFragment(ResourceManager.getApps()));
                 }
             });
 
             return convertView;
+        }
+    }
+
+    private class CategoryItem {
+        String name;
+        int iconSrcID;
+
+        public CategoryItem(String name, int iconSrcID) {
+            this.name = name;
+            this.iconSrcID = iconSrcID;
         }
     }
 
