@@ -57,31 +57,7 @@ public class SearchFragment extends Fragment{
 
             @Override
             public void onSearchConfirmed(CharSequence text) {
-
-                String myText = text.toString().toLowerCase();
-                if (myText.length() == 0) {
-                    Toast.makeText(getContext(), "Write something!", Toast.LENGTH_LONG).show();
-                    return;
-                }
-
-                ArrayList<AppInformation> apps = ResourceManager.getApps();
-                ArrayList<Pair<AppInformation, Double>> appsWithValue = new ArrayList<>();
-                for (AppInformation app : apps) {
-                    appsWithValue.add(Pair.create(app, getSortValue(app, myText)));
-                }
-                Collections.sort(appsWithValue, new Comparator<Pair<AppInformation, Double>>() {
-                    @Override
-                    public int compare(Pair<AppInformation, Double> o1, Pair<AppInformation, Double> o2) {
-                        return o2.second.compareTo(o1.second);
-                    }
-                });
-                ArrayList<AppInformation> appsToShow = new ArrayList<>();
-                for (int i = 0; i < appsWithValue.size(); ++i) {
-                    if (appsWithValue.get(i).second > 0)
-                        appsToShow.add(appsWithValue.get(i).first);
-                }
-
-                loadFragment(new AppListFragment(appsToShow));
+                startSearch(text.toString());
             }
 
             @Override
@@ -91,6 +67,32 @@ public class SearchFragment extends Fragment{
         });
 
         return root;
+    }
+
+    private void startSearch (String text) {
+        if (text.length() == 0) {
+            Toast.makeText(getContext(), "Write something!", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        ArrayList<AppInformation> apps = ResourceManager.getApps();
+        ArrayList<Pair<AppInformation, Double>> appsWithValue = new ArrayList<>();
+        for (AppInformation app : apps) {
+            appsWithValue.add(Pair.create(app, getSortValue(app, text)));
+        }
+        Collections.sort(appsWithValue, new Comparator<Pair<AppInformation, Double>>() {
+            @Override
+            public int compare(Pair<AppInformation, Double> o1, Pair<AppInformation, Double> o2) {
+                return o2.second.compareTo(o1.second);
+            }
+        });
+        ArrayList<AppInformation> appsToShow = new ArrayList<>();
+        for (int i = 0; i < appsWithValue.size(); ++i) {
+            if (appsWithValue.get(i).second > 0)
+                appsToShow.add(appsWithValue.get(i).first);
+        }
+
+        loadFragment(new AppListFragment(appsToShow));
     }
 
     public static Double getSortValue(AppInformation app, String text) {
