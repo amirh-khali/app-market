@@ -36,6 +36,12 @@ public class SearchFragment extends Fragment{
     private MaterialSearchBar materialSearchBar;
     private FrameLayout container;
 
+    public static final int SUBSTRING_FROM_0 = 4;
+    public static final int SUBSTRING = 3;
+    public static final int SUBSEQUENCE = 2;
+    public static final int DESCRIPTION = 1;
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_search, container, false);
@@ -59,25 +65,14 @@ public class SearchFragment extends Fragment{
                 }
 
                 ArrayList<AppInformation> apps = ResourceManager.getApps();
-                ArrayList<Pair<AppInformation, Integer>> appsWithValue = new ArrayList<>();
+                ArrayList<Pair<AppInformation, Double>> appsWithValue = new ArrayList<>();
                 for (AppInformation app : apps) {
-                    appsWithValue.add(Pair.create(app, 0));
+                    appsWithValue.add(Pair.create(app, getSortValue(app, myText)));
                 }
-
-                //set apps search value
-                for (int i = 0; i < appsWithValue.size(); ++i) {
-                    AppInformation app = appsWithValue.get(i).first;
-                    String appName = app.mName.toLowerCase();
-                    if (appName.length() >= myText.length() && myText.equals(appName.substring(0, myText.length()))) {
-                        appsWithValue.set(i, Pair.create(appsWithValue.get(i).first, appsWithValue.get(i).second + 1));
-                    }
-                }
-
-                //show apps by value
-                Collections.sort(appsWithValue, new Comparator<Pair<AppInformation, Integer>>() {
+                Collections.sort(appsWithValue, new Comparator<Pair<AppInformation, Double>>() {
                     @Override
-                    public int compare(Pair<AppInformation, Integer> o1, Pair<AppInformation, Integer> o2) {
-                        return o1.second.compareTo(o2.second);
+                    public int compare(Pair<AppInformation, Double> o1, Pair<AppInformation, Double> o2) {
+                        return o2.second.compareTo(o1.second);
                     }
                 });
                 ArrayList<AppInformation> appsToShow = new ArrayList<>();
@@ -96,6 +91,25 @@ public class SearchFragment extends Fragment{
         });
 
         return root;
+    }
+
+    public static Double getSortValue(AppInformation app, String text) {
+        String appName = app.mName.toLowerCase();
+        String appDescription = app.mDescription.toLowerCase();
+        Double appRate = app.mRate;
+        Integer value = 0;
+        if (appName.length() >= text.length() && text.equals(appName.substring(0, text.length()))) value += SUBSTRING_FROM_0;
+        if (appName.contains(text)) value += SUBSTRING;
+        for (int i = 0, j = 0; i < appName.length(); ++i) {
+            if (text.charAt(j) == appName.charAt(i)) ++j;
+            if (j == text.length()) {
+                value += SUBSEQUENCE;
+                break;
+            }
+        }
+        if (appDescription.contains(text)) value += DESCRIPTION;
+
+        return value * appRate;
     }
 
     public boolean clearSearchPage() {
