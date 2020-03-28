@@ -2,6 +2,7 @@ package com.example.appmarket;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import com.example.appmarket.ui.category.CategoryFragment;
 import com.example.appmarket.ui.list.AppListFragment;
@@ -69,11 +70,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         FragmentManager fragmentManager = getSupportFragmentManager();
-
         if (fragmentManager.getBackStackEntryCount() > 1) {
             fragmentManager.popBackStackImmediate();
         } else {
-            supportFinishAfterTransition();
+            Fragment fragment = fragmentManager.findFragmentByTag(SearchFragment.class.getSimpleName());
+            boolean finish = true;
+            if (fragment != null) {
+                finish = ((SearchFragment)fragment).clearSearchPage();
+            }
+            if (finish)
+                supportFinishAfterTransition();
         }
     }
 
@@ -86,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_container, fragment);
+        transaction.replace(R.id.frame_container, fragment, fragment.getClass().getSimpleName());
         transaction.addToBackStack(null);
         transaction.commit();
     }
