@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:met_floatingLabel="normal"
-            android:hint="example@gmail.com"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:textColor="@color/colorText"
             app:met_baseColor="@color/colorText"

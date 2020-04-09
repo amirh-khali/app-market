@@ -16,8 +16,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:background="@color/colorBackground"
+            android:theme="@style/ToolbarTheme"
             app:popupTheme="@style/MenuStyle">
 
             <androidx.cardview.widget.CardView
@@ -30,7 +30,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:scaleType="fitXY"
-                    android:background="@color/colorText"
+                    android:background="@color/colorBackground"
                     android:src="@drawable/ic_account_circle_black_24dp"/>
 
             </androidx.cardview.widget.CardView>
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:text="username"
-                android:textColor="@color/colorButtonText"
+                android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
                 android:layout_marginStart="25dp"/>
 
