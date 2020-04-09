@@ -25,7 +25,7 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="#fff"
-            android:text="CHAT APP"/>
+            android:text="APP MARKET"/>
         
         <Button
             android:layout_width="match_parent"
