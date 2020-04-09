@@ -3,22 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#71814F</color>
-    <color name="colorText">#000000</color>
+    <color name="colorText">#202020</color>
     <color name="colorBackground">#FFFFFF</color>
-
-    <!-- Bellow is Armin's Strings-->
-
-
-    <!-- Bellow is Sajjad's Strings-->
-
-
-    <!-- Bellow is Mohammad's Strings-->
-
-
-    <!-- Bellow is Javad's Strings-->
-
-
-    <!-- Bellow is AmirHossein's Strings-->
-
-
+    <color name="colorButtonText">#FFFFFF</color>
 </resources>

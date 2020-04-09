@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Authentication.LoginActivity">
+    tools:context="Authentication.LoginActivity"
+    android:background="@color/colorBackground">
 
     <include
         android:id="@+id/toolbar"
@@ -23,7 +24,8 @@
             android:layout_height="wrap_content"
             android:text="Login"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/searchBarTextColor"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/email"
@@ -32,7 +34,11 @@
             android:layout_marginTop="10dp"
             app:met_floatingLabel="normal"
             android:hint="example@gmail.com"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorText"
+            app:met_baseColor="@color/colorText"
+            app:met_underlineColor="@color/colorText"/>
+
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/password"
@@ -41,7 +47,10 @@
             android:layout_marginTop="10dp"
             app:met_floatingLabel="normal"
             android:hint="Password"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:textColor="@color/colorText"
+            app:met_baseColor="@color/colorText"
+            app:met_underlineColor="@color/colorText"/>
 
         <Button
             android:layout_width="match_parent"
@@ -49,7 +58,7 @@
             android:text="Login"
             android:id="@+id/btn_login"
             android:background="@color/colorPrimaryDark"
-            android:textColor="#fff"
+            android:textColor="@color/colorButtonText"
             android:layout_marginTop="10dp"/>
 
     </LinearLayout>

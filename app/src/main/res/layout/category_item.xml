@@ -25,6 +25,7 @@
         android:layout_toEndOf="@id/category_icon"
         android:gravity="center_vertical"
         android:textSize="@dimen/Text_size"
+        android:textColor="@color/colorText"
         tools:text="buuuuullllshiiiiit" />
 
 </RelativeLayout>

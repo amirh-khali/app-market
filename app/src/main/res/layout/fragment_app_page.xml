@@ -47,7 +47,8 @@
                     android:maxWidth="180dp"
                     android:maxLines="1"
                     android:textSize="@dimen/Text_title_size"
-                    tools:text="App Name Size" />
+                    tools:text="App Name Size"
+                    android:textColor="@color/colorText"/>
 
                 <TextView
                     android:id="@+id/app_developer"
@@ -58,7 +59,8 @@
                     android:maxWidth="100dp"
                     android:maxLines="1"
                     android:textSize="@dimen/Text_size"
-                    tools:text="Telegram.Co" />
+                    tools:text="Telegram.Co"
+                    android:textColor="@color/colorText"/>
 
 
             </RelativeLayout>
@@ -78,7 +80,8 @@
                     android:layout_margin="6dp"
                     android:layout_weight="1"
                     android:background="@drawable/link_button"
-                    android:text="@string/text_install" />
+                    android:text="@string/text_install"
+                    android:textColor="@color/colorButtonText"/>
             </LinearLayout>
 
             <LinearLayout
@@ -141,7 +144,8 @@
                     app:layout_constraintEnd_toEndOf="@id/gl1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="BLAAA" />
+                    tools:text="BLAAA"
+                    android:textColor="@color/colorText"/>
 
                 <TextView
                     android:id="@+id/app_category"
@@ -152,7 +156,8 @@
                     app:layout_constraintEnd_toEndOf="@id/gl2"
                     app:layout_constraintStart_toStartOf="@id/gl1"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="BLAAA" />
+                    tools:text="BLAAA"
+                    android:textColor="@color/colorText"/>
 
                 <TextView
                     android:id="@+id/app_rate"
@@ -163,7 +168,8 @@
                     app:layout_constraintEnd_toEndOf="@id/gl3"
                     app:layout_constraintStart_toStartOf="@id/gl2"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="BLAAA" />
+                    tools:text="BLAAA"
+                    android:textColor="@color/colorText"/>
 
                 <TextView
                     android:id="@+id/app_count_of_download"
@@ -174,7 +180,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/gl3"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="BLAAA" />
+                    tools:text="BLAAA"
+                    android:textColor="@color/colorText"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
