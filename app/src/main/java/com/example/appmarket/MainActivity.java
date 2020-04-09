@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.appmarket.ui.category.CategoryFragment;
+import com.example.appmarket.ui.home.HomeFragment;
 import com.example.appmarket.ui.list.AppListFragment;
 import com.example.appmarket.ui.search.SearchFragment;
 import com.example.appmarket.ui.setting.SettingFragment;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 clearBackStack();
                 switch (menuItem.getItemId()) {
                     case R.id.navigation_home:
-                        loadFragment(new AppListFragment(ResourceManager.getApps()));
+                        loadFragment(new HomeFragment());
                         return true;
                     case R.id.navigation_search:
                         loadFragment(new SearchFragment());
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        loadFragment(new AppListFragment(ResourceManager.getApps()));
+        loadFragment(new HomeFragment());
 
     }
 

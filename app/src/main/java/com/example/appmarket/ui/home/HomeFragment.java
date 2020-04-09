@@ -20,10 +20,15 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        ((MainActivity)getContext()).loadFragment(new AppListFragment(ResourceManager.getApps()));
+        loadFragment(new AppListFragment(ResourceManager.getApps()));
 
         return root;
     }
 
-
+    public void loadFragment(Fragment fragment) {
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_home_container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 }
