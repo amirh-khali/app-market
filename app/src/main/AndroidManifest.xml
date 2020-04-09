@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="login.Signup"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name">
+        <activity android:name="Authentication.LoginActivity"
+            android:parentActivityName="Authentication.StartActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name="Authentication.RegisterActivity"
+            android:parentActivityName="Authentication.StartActivity"/>
+        <activity android:name="Authentication.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

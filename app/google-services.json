@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "53544052580",
+    "firebase_url": "https://app-market-312d2.firebaseio.com",
+    "project_id": "app-market-312d2",
+    "storage_bucket": "app-market-312d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53544052580:android:0e0e41f9a6e074a1d37c71",
+        "android_client_info": {
+          "package_name": "com.example.appmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53544052580-j8n4nc3o67hemh031ecbpt91sheebkgr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzfuyw1eas4F0O45E_u7WH5Osdcb-QIIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53544052580-j8n4nc3o67hemh031ecbpt91sheebkgr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

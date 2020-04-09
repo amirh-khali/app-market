@@ -1,6 +1,8 @@
 package com.example.appmarket;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
@@ -9,6 +11,7 @@ import com.example.appmarket.ui.list.AppListFragment;
 import com.example.appmarket.ui.search.SearchFragment;
 import com.example.appmarket.ui.setting.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -17,9 +20,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import Authentication.StartActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    private ActionBar toolbar;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -31,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         //add fake resource
         new ResourceManager();
 
-        toolbar = getSupportActionBar();
         bottomNavigationView = findViewById(R.id.nav_view);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -41,19 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 clearBackStack();
                 switch (menuItem.getItemId()) {
                     case R.id.navigation_home:
-                        toolbar.setTitle(getString(R.string.title_home));
                         loadFragment(new AppListFragment(ResourceManager.getApps()));
                         return true;
                     case R.id.navigation_search:
-                        toolbar.setTitle(getString(R.string.title_search));
                         loadFragment(new SearchFragment());
                         return true;
                     case R.id.navigation_category:
-                        toolbar.setTitle(getString(R.string.title_category));
                         loadFragment(new CategoryFragment());
                         return true;
                     case R.id.navigation_setting:
-                        toolbar.setTitle(getString(R.string.title_setting));
                         loadFragment(new SettingFragment());
                         return true;
                 }
@@ -61,10 +60,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        toolbar.setTitle(getString(R.string.title_home));
         loadFragment(new AppListFragment(ResourceManager.getApps()));
 
-        toolbar.hide();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this, StartActivity.class));
+                finish();
+                return true;
+        }
+        return false;
     }
 
     @Override
