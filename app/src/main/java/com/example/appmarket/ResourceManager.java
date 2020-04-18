@@ -22,6 +22,9 @@ public class ResourceManager {
     }
 
     public ResourceManager () {
+        /*
+        //TODO use firebase database
+        /*/
         apps = new ArrayList<>();
         apps.add(new AppInformation("Call of Duty",
                 GameCategories.GAME_ACTION,
@@ -733,7 +736,7 @@ public class ResourceManager {
                         "★ android.permission.WRITE_EXTERNAL_STORAGE : to download latest currency exchange rates to the device and access it. (premium feature)\n" +
                         "Our Unit Converter is the highest rated Unit Converter App in Google play store. Our app has over a 5 Million user base. Our unit converter app has the likes of various users ranging from students to a high-level Professional who use conversion tools for their daily activities which serves their purpose.\n" +
                         "P.S. Unit converter was designed with the goal of supporting wide range of devices from small screen phone devices to large screen tablets plus it features worldwide languages and their conversion system. We aim to add and support more range of units to the application in the near future. Thanks for your continuous support."));
-
+        //*/
     }
 
 }
